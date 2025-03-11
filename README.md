@@ -24,4 +24,3 @@ Before you begin, ensure you have the following installed:
 
 ```bash
 https://github.com/Abd-AlrahmanMohamed/JsonPlaceholder-Angular.git
-https://github.com/Abd-AlrahmanMohamed/Jsonplaceholder-React.git
