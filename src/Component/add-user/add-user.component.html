@@ -1,0 +1,65 @@
+<div class="container w-50">
+  <h1>Sign in:</h1>
+  <form [formGroup]="addUserForm" (ngSubmit)="onSubmit()">
+    <!-- (ngSubmit)="onSubmit()" -->
+    <div class="mb-3">
+      <label for="fname">FullName</label>
+      <input type="text" id="fname" formControlName="fullname" class="form-control">
+      <div  [hidden]="addUserForm.get('fullname')?.valid || addUserForm.get('fullame')?.untouched">
+        <small *ngIf=" addUserForm.get('fullname')?.hasError('pattern')" class="text-danger">
+          Full Name must be at least 5 characters long
+        </small>
+
+      </div>
+    </div>
+
+    <!-- Username -->
+    <div class="mb-3">
+      <label for="uname">Username</label>
+      <input type="text" id="uname" formControlName="username" class="form-control">
+    </div>
+
+    <!-- Email -->
+    <div class="mb-3">
+      <label for="email">Email</label>
+      <input type="email" id="email" formControlName="email" class="form-control">
+    </div>
+
+    <!-- Address FormGroup -->
+    <div formGroupName="address" class="mb-3">
+      <label for="street">Street</label>
+      <input type="text" id="street" formControlName="street" class="form-control">
+      <label for="suit">Suit</label>
+      <input type="text" id="suit" formControlName="suit" class="form-control">
+      <label for="city">City</label>
+      <input type="text" id="city" formControlName="city" class="form-control">
+      <label for="zipcode">Zipcode</label>
+      <input type="text" id="zipcode" formControlName="zipcode" class="form-control">
+    </div>
+
+    <!-- Phone -->
+    <div class="mb-3">
+      <label for="phone">Phone</label>
+      <input type="text" id="phone" formControlName="phone" class="form-control">
+    </div>
+
+    <!-- Website -->
+    <div class="mb-3">
+      <label for="website">Website</label>
+      <input type="text" id="website" formControlName="website" class="form-control">
+    </div>
+
+    <!-- Company FormGroup -->
+    <div formGroupName="company" class="mb-3">
+      <label for="name">Name</label>
+      <input type="text" id="name" formControlName="name" class="form-control">
+      <label for="catchPhrase">Catch Phrase</label>
+      <input type="text" id="catchPhrase" formControlName="catchPhrase" class="form-control">
+      <label for="bs">Business Sector</label>
+      <input type="text" id="bs" formControlName="bs" class="form-control">
+    </div>
+
+    <!-- Submit Button -->
+    <button type="submit" class="btn btn-info text-light" (click)="onSubmit()">Submit</button>
+  </form>
+</div>

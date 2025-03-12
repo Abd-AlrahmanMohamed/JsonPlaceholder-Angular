@@ -1,0 +1,9 @@
+<div class="container">
+  <div class="row">
+    <div *ngFor="let photo of photos" class="gPhoto card col-4 p-2" [routerLink]="['photos', photo.id]" >
+      <img [src]="photo.thumbnailUrl" alt="Album Image ">
+      <p> {{photo.title}}</p>
+      <p> {{photo.url}}</p>
+    </div>
+  </div>
+</div>
