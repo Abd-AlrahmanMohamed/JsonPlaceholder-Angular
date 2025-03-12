@@ -7,7 +7,7 @@ This project is a simple demonstration of how to use the **JSONPlaceholder API**
 The **JSONPlaceholder** provides a set of resources, including users, posts, comments, albums, and photos, that you can access and work with via HTTP requests.
 
 - **Posts**: Blog posts.
-- **Comments**: Comments related to posts.
+- **User**: Register User.
 - **Albums**: Album information.
 - **Photos**: Photos related to albums.
 
